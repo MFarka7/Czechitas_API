@@ -113,11 +113,11 @@
               "pm.test(\"Account created with balance eql to 0\", function () {\r",
               "    var jsonData = pm.response.json();\r",
               "    pm.expect(jsonData.success).to.eql(true);\r",
-              "    pm.expect(jsonData.data.bankAccount.data.balance).to.eql(0);\r",
+              "    pm.expect(jsonData.data.bankAccount.balance).to.eql(0);\r",
               "});\r",
               "\r",
-              "pm.collectionVariables.set(\"newAccNr\",pm.response.json().data.bankAccount.data.number);\r",
-              "pm.collectionVariables.set(\"newAccId\",pm.response.json().data.bankAccount.data.id);"
+              "pm.collectionVariables.set(\"newAccNr\",pm.response.json().data.bankAccount.number);\r",
+              "pm.collectionVariables.set(\"newAccId\",pm.response.json().data.bankAccount.id);"
             ],
             "type": "text/javascript",
             "packages": {},
@@ -256,7 +256,7 @@
               "});\r",
               "pm.test(\"Balance is 99900\", function () {\r",
               "    var jsonData = pm.response.json();\r",
-              "    pm.expect(jsonData.data.balance).to.eql(99900);\r",
+              "    pm.expect(jsonData.data.bankAccount.balance).to.eql(99900);\r",
               "});\r",
               "\r",
               ""
@@ -295,7 +295,7 @@
               "});\r",
               "pm.test(\"Balance is 100\", function () {\r",
               "    var jsonData = pm.response.json();\r",
-              "    pm.expect(jsonData.data.balance).to.eql(100);\r",
+              "    pm.expect(jsonData.data.bankAccount.balance).to.eql(100);\r",
               "});\r",
               "\r",
               ""
